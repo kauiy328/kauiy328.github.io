@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @keyframes fadeout {
+            /* at 100% fade out the div box */
+            100% {
+                opacity: 0;
+            }
+        }
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        div { 
+            width: 14.2857142857%; /* 100 / 7 */
+            height: 100vh;
+            float: left;
+            animation-name: fadeout;
+            /* set the duration */
+            animation-duration: 2s;
+            /* set the animation timing */
+            animation-timing-function: cubic-bezier(.60,.19,.32,.90);
+            /* set the iterations */
+            animation-iteration-count: infinite;
+            /* set the direction to alternate */
+            animation-direction: alternate;
+        }
+         .red {
+            background-color: red;
+            animation-delay: 3s;
+        }
+        .orange {
+            background-color: orange;
+            animation-delay: 1s;
+        }
+        .yellow {
+            background-color: yellow;
+            animation-delay: 4s;
+        }
+        .green {
+            background-color: green;
+            animation-delay: 3s;
+        }
+        .blue {
+            background-color: blue;
+            animation-delay: 2s;
+        }
+        .purple {
+            background-color: purple;
+            animation-delay: 1s;
+        }
+        .pink {
+            background-color: pink;
+            animation-delay: 2s;
+        }
+    </style>
+</head>
+<body>
+    <div class="red"> </div>
+    <div class="orange"> </div>
+    <div class="yellow"> </div>
+    <div class="green"> </div>
+    <div class="blue"> </div>
+    <div class="purple"> </div>
+    <div class="pink"> </div>
+</body>
+</html>
