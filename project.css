@@ -1,0 +1,578 @@
+.button-link {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    text-align: justify;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    position: absolute;
+    border: 2px solid #333;  
+    z-index: 3;
+}
+
+#button-link-next {
+    right: 5vw;
+}
+
+#button-link-back {
+    left: 5vw;
+}
+
+.button-link:hover {
+    background-color: purple;
+    box-shadow: 5px 5px 10px black;
+}
+
+.button-link:active {
+    transform: scale(0.80);
+    transition: transform 0.1s;
+}
+
+@keyframes tortoise-walk {
+    0% {
+        transform: translateX(0); /* Start at its current position */
+    }
+    100% {
+        transform: translateX(100vw); /* Move 50% of the viewport width to the right */
+    }
+}
+
+@keyframes jump-forward {
+    /* Start of the jump (on the ground, at the starting position) */
+    0% {
+        transform: translate(0, 0);
+    }
+    /* The first jump arc */
+    25% {
+        transform: translate(25vw, -50px);
+    }
+    /* The peak of the jump (moves up and halfway forward) */
+    50% {
+        transform: translate(50vw, 0);
+    }
+    /* The second jump arc */
+    75% {
+        transform: translate(75vw, -50px);
+    }
+    /* End of the jump (back on the ground, at the final position) */
+    100% {
+        transform: translate(100vw, 0);
+    }
+}
+
+#page-1 {
+    background-image: url("images/forest_page_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+#page-1 h1 {
+    height: 40vh;
+    width: 70vw;
+    font-size: 4rem;
+    font-family: 'Handlee', cursive;
+    text-align: center;
+    color: #4CAF50;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 50px;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 10%;
+    left: 15%;
+    z-index: 2;
+    text-shadow: 5px 5px 5px #592b0fdc;
+}
+
+#page-1 #title-sign {
+    height: 30vh;
+    width: 70vw;
+    position: absolute;
+    top: 2%;
+    left: 15%;
+    z-index: 1;
+}
+
+#page-1 #tortoise {
+    height: 20vh;
+    width: 20vw;
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    animation: tortoise-walk 100s forwards normal; /* Apply the animation here */
+    z-index: 1;
+}
+
+#page-1 #hare {
+    height: 20vh;
+    width: 20vw;
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    animation: jump-forward 3s ease-in-out forwards normal;
+    z-index: 1;
+}
+
+#page-1 #start-sign {
+    height: 15vh;
+    width: 10vw;
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    z-index: 0;
+}
+@keyframes tortoise-walk-appear {
+    0% {
+        transform: translateX(0); /* Start at its current position */
+        opacity: 0%;
+    }
+    100% {
+        transform: translateX(25vw); /* Move 50% of the viewport width to the right */
+        opacity: 100%;
+    }
+}
+
+@keyframes jump-forward-appear {
+    /* Start of the jump (on the ground, at the starting position) */
+    0% {
+        transform: translate(110vw, 0) scaleX(-1);
+    }
+    /* The first jump arc */
+    50% {
+        transform: translate(75vw, -50px) scaleX(-1);
+    }
+    100% {
+        transform: translate(50vw, 0)scaleX(-1);
+    }
+}
+
+#page-2 {
+    background-image: url("images/forest_page_2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+#page-2 #text-page-2 {
+    background-color: #DED6D6;
+    font-size: 2rem;
+    justify-content: center;
+    position: absolute;
+    top: 10%;
+    border-radius: 10px 10px 10px 10px;
+}
+
+#page-2 #tortoise {
+    height: 20vh;
+    width: 20vw;
+    position: absolute;
+    top: 80%;
+    left: -10;
+    animation: tortoise-walk-appear normal forwards 1s;
+}
+
+#page-2 #hare {
+    height: 20vh;
+    width: 20vw;
+    position: absolute;
+    top: 80%;
+    right: -10;
+    animation: jump-forward-appear normal forwards 1s;
+}
+
+#page-2 #text-bubble-hare {
+    width: 15vw;
+    height: 30vh;
+    background-color: rgb(129, 171, 203);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 84% 100%, 50% 75%, 0% 75%);
+    text-align: center;
+    font-size: 2rem;
+    transform: translate(42vw,55vh);
+}
+
+@keyframes laughing-rotate {
+    /* Start of the jump (on the ground, at the starting position) */
+    0% {
+        transform: rotate(0deg);
+    }
+    /* The first jump arc */
+    50% {
+        transform: rotate(-25deg);
+    }
+    100% {
+        transform:rotate(25deg);
+    }
+}
+
+@keyframes tortoise-walk-page3 {
+    0% {
+        transform: translateX(0); /* Start at its current position */
+    }
+    100% {
+        transform: translateX(5vw); /* Move 50% of the viewport width to the right */
+    }
+}
+
+
+
+#page-3 {
+    background-image: url("images/forest_page_3.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow: hidden;
+
+}
+
+#page-3 #hare {
+    height: 50vh;
+    width: 40vw;
+    position: absolute;
+    top: 30%;
+    right: 25%;
+    animation: laughing-rotate alternate-reverse infinite 2s;
+}
+
+#page-3 #tortoise {
+    height: 20vh;
+    width: 20vw;
+    position: absolute;
+    top: 80%;
+    left: -10;
+    animation: tortoise-walk-page3 5s forwards;
+}
+
+#page-3 #text-page-3 {
+    background-color: #DED6D6;
+    font-size: 2rem;
+    justify-content: center;
+    position: absolute;
+    top: 10%;
+    border-radius: 10px 10px 10px 10px;
+}
+
+#page-3 #text-bubble-hare {
+    width: 15vw;
+    height: 30vh;
+    background-color: rgb(129, 171, 203);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 84% 100%, 50% 75%, 0% 75%);
+    text-align: center;
+    font-size: 2rem;
+    transform: translate(35vw,20vh);
+}
+
+#page-3 #text-bubble-tortoise {
+    width: 15vw;
+    height: 30vh;
+    background-color: rgb(240, 32, 0);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 25% 75%, 25% 100%, 50% 75%, 0% 75%);
+    text-align: center;
+    font-size: 2rem;
+    transform: translate(20vw, 20vh);
+}
+
+
+
+@keyframes tortoise-walk {
+    0% {
+        transform: translateX(0); /* Start at its current position */
+    }
+    100% {
+        transform: translateX(100vw); /* Move 50% of the viewport width to the right */
+    }
+}
+
+@keyframes jump-forward {
+    0% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(25vw, -50px);
+    }
+    50% {
+        transform: translate(50vw, 0);
+    }
+    75% {
+        transform: translate(75vw, -50px);
+    }
+    100% {
+        transform: translate(100vw, 0);
+    }
+}
+
+
+@keyframes gun-recoil {
+    0% {
+        transform: rotate(0deg) translateX(0);
+    }
+    50% {
+        /* Snaps back aggressively */
+        transform: rotate(10deg) translateX(-15px); 
+    }
+    100% {
+        transform: rotate(-1deg) translateX(0);
+    }
+}
+
+@keyframes screen-shake {
+    0% { 
+        transform: translate(1px, 1px) rotate(0deg); 
+    }
+    25% { 
+        transform: translate(-1px, 0px) rotate(-0.5deg); 
+    }
+    50% { 
+        transform: translate(1px, -1px) rotate(0.5deg); 
+    }
+    75% { 
+        transform: translate(-1px, 1px) rotate(-0.2deg); 
+    }
+    100% { 
+        transform: translate(0, 0) rotate(0deg); 
+    } 
+}
+
+@keyframes crowd-jump {
+    0% {
+        transform: translateY(0); /* Start position */
+    }
+    50% {
+        transform: translateY(-5px); /* Move 5 pixels up (the jump) */
+    }
+    100% {
+        transform: translateY(0); /* Return to start position */
+    }
+}
+
+#page-4 {
+    background-image: url("images/forest_page_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow: hidden;
+
+}
+
+#shakable-container {
+    width: 100vw; 
+    min-height: 100vh;
+    
+    /* Apply the screen-shake animation to this wrapper DIV */
+    animation: 
+        screen-shake 0.3s cubic-bezier(.36,.07,.19,.97) both;
+    
+    /* Start after a 0.5s delay and run once */
+    animation-delay: 7.5s; 
+    animation-iteration-count: 1; 
+}
+
+#page-4 #tortoise {
+    height: 20vh;
+    width: 20vw;
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    animation: tortoise-walk 100s forwards normal; /* Apply the animation here */
+    animation-delay: 7.5s;
+    z-index: 1;
+}
+
+#page-4 #hare {
+    height: 20vh;
+    width: 20vw;
+    position: absolute;
+    top: 80%;
+    left: 5%;
+    animation: jump-forward 3s ease-in-out forwards normal;
+    animation-delay: 7.5s;
+    z-index: 1;
+}
+
+#page-4 #start-sign {
+    height: 15vh;
+    width: 10vw;
+    position: absolute;
+    top: 80%;
+    left: 30%;
+    z-index: 0;
+}
+
+
+#page-4 #text-page-4 {
+    background-color: #DED6D6;
+    font-size: 2rem;
+    justify-content: center;
+    position: absolute;
+    top: 10%;
+    border-radius: 10px 10px 10px 10px;
+    
+}
+
+#page-4 #flare_gun {
+    width: 5vw;
+    height: 15vh;
+    position: absolute;
+    top: 60%;
+    left: 39%; 
+    
+    /* CRUCIAL: Pivot point is set to the bottom handle for realistic recoil */
+    transform-origin: 50% 100%; 
+    
+    /* Apply the gun recoil animation */
+    animation: gun-recoil 0.15s ease-out 7.5s 1 forwards;
+}
+
+#page-4 #bear {
+    height: 30vh;
+    width: 20vw;
+    position: absolute;
+    top: 65%;
+    left: 5%;
+    z-index: 0;
+    animation: crowd-jump 0.5s ease-in-out infinite alternate;
+
+}
+
+#page-4 #raccoon {
+    height: 20vh;
+    width: 10vw;
+    position: absolute;
+    top: 75%;
+    left: 20%;
+    z-index: 0;
+    animation: crowd-jump 0.5s ease-in-out infinite alternate;
+
+}
+
+
+#page-4 #fox_referee {
+    height: 35vh;
+    width: 25vw;
+    position: absolute;
+    top: 65%;
+    left: 35%;
+}
+
+
+
+#page-5 {
+    background-image: url("images/forest_page_5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow: hidden;
+
+}
+
+
+
+
+
+
+
+
+/*This contains the div box which holds the tree*/
+#leftbox {
+    top: 0;
+    left: 0;
+    width: 70vw;
+    height: 100vh;
+    clip-path:  polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 49%, 0% 0%);
+    shape-outside: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 49%, 0% 0%);
+    font-size: 100px;
+    float: left;
+    margin-right: -190px;
+    transform: scale(1.09);
+    
+}
+/*you can modify the background color of the textbox if you want*/
+#textboxstuff {
+    font-size: 2rem;
+    background-color: #DED6D6;
+    border-radius: 10px 10px 10px 10px;
+    width: 86vw;
+
+
+    
+}
+
+/*This controls the tree image*/
+#page5tree {
+    position: relative;
+    top:  -40%;
+    left: -39%;
+    width: 100%;
+
+}
+
+
+@keyframes jump-forward-page-5 {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(20vw, -40px);
+    }
+    100% {
+        transform: translate(40vw, 0);
+}
+}
+
+
+/* --- New Keyframe: Running Hare Fade Out --- */
+@keyframes hare-fade-out {
+    100% {
+        opacity: 0;
+        /* Keep the hare at the final position defined by the jump animation */
+        transform: translate(40vw, 0);
+    }
+}
+
+/* --- New Keyframe: Sleeping Hare Fade In --- */
+@keyframes hare-fade-in {
+    0% {
+        opacity: 0; /* Start invisible */
+    }
+    100% {
+        opacity: 1; /* End fully visible */
+    }
+}
+
+.hare-racer {
+    height: 20vh;
+    width: 20vw;
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    z-index: 1; /* Ensures they are above other elements */
+}
+
+#hare-running {
+    /* Running hare is visible and moves */
+    opacity: 1;
+    animation: jump-forward-page-5 2s ease-in-out forwards normal, hare-fade-out 0.5s 2s forwards; /* Fades out after 2s (when movement ends) */
+}
+
+#hare-sleeping {
+    /* Sleeping hare starts invisible, positioned at the end of the jump */
+    opacity: 0;
+    
+    /* CRUCIAL: Manually set the final movement position */
+    /* This ensures the sleeping hare is exactly where the running hare stopped */
+    transform: translate(40vw, 0); 
+
+    /* Fade in after the running hare's movement animation finishes (2s) */
+    animation: hare-fade-in 0.5s 2s forwards; 
+}
+
