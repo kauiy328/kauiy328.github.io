@@ -267,7 +267,7 @@
     clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 84% 100%, 50% 75%, 0% 75%);
     text-align: center;
     font-size: 2rem;
-    transform: translate(35vw,20vh);
+    transform: translate(35vw,25vh);
 }
 
 #page-3 #text-bubble-tortoise {
@@ -576,3 +576,49 @@
     animation: hare-fade-in 0.5s 2s forwards; 
 }
 
+#zzz-bubble {
+    width: 10vw;
+    height: 20vh;
+    position: absolute;
+    z-index: 2; 
+    
+    top: 50%; 
+    left: 43%; 
+
+    opacity: 0; 
+    
+    animation: 
+        /* 1. Bobbing Movement: 1.5s, infinite loop, alternates back and forth */
+        zzz-bob-diagonal 1.5s ease-in-out infinite alternate,
+        /* 2. Fade In: Makes the ZZZ appear quickly */
+        zzz-fade-in 0.2s forwards;
+        
+    /* CRITICAL: Delay the start of BOTH animations (2s movement + 0.5s fade) */
+    animation-delay: 2.5s; 
+}
+
+@keyframes zzz-fade-in {
+    100% {
+        opacity: 1; 
+    }
+}
+
+/* --- ZZZ Movement Keyframe (Top-Left Diagonal Bob) --- */
+@keyframes zzz-bob-diagonal {
+    0% { 
+        /* Start position (bottom-right of the movement path) */
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+    50% { 
+        /* Peak position (up and left) */
+        /* Moves 10px UP (-10px) and 10px LEFT (-10px) */
+        transform: translate(-10px, -10px); 
+        opacity: 1;
+    }
+    100% { 
+        /* Slightly offset from 0% before reversal */
+        transform: translate(2px, 2px); 
+        opacity: 1;
+    }
+}
