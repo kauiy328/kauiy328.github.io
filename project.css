@@ -33,31 +33,26 @@
 
 @keyframes tortoise-walk {
     0% {
-        transform: translateX(0); /* Start at its current position */
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(100vw); /* Move 50% of the viewport width to the right */
+        transform: translateX(100vw);
     }
 }
 
 @keyframes jump-forward {
-    /* Start of the jump (on the ground, at the starting position) */
     0% {
         transform: translate(0, 0);
     }
-    /* The first jump arc */
     25% {
         transform: translate(25vw, -50px);
     }
-    /* The peak of the jump (moves up and halfway forward) */
     50% {
         transform: translate(50vw, 0);
     }
-    /* The second jump arc */
     75% {
         transform: translate(75vw, -50px);
     }
-    /* End of the jump (back on the ground, at the final position) */
     100% {
         transform: translate(100vw, 0);
     }
@@ -105,7 +100,7 @@
     position: absolute;
     top: 80%;
     left: 5%;
-    animation: tortoise-walk 100s forwards normal; /* Apply the animation here */
+    animation: tortoise-walk 100s forwards normal;
     z-index: 1;
 }
 
@@ -129,21 +124,19 @@
 }
 @keyframes tortoise-walk-appear {
     0% {
-        transform: translateX(0); /* Start at its current position */
+        transform: translateX(0);
         opacity: 0%;
     }
     100% {
-        transform: translateX(25vw); /* Move 50% of the viewport width to the right */
+        transform: translateX(25vw);
         opacity: 100%;
     }
 }
 
 @keyframes jump-forward-appear {
-    /* Start of the jump (on the ground, at the starting position) */
     0% {
         transform: translate(110vw, 0) scaleX(-1);
     }
-    /* The first jump arc */
     50% {
         transform: translate(75vw, -50px) scaleX(-1);
     }
@@ -199,11 +192,9 @@
 }
 
 @keyframes laughing-rotate {
-    /* Start of the jump (on the ground, at the starting position) */
     0% {
         transform: rotate(0deg);
     }
-    /* The first jump arc */
     50% {
         transform: rotate(-25deg);
     }
@@ -214,10 +205,10 @@
 
 @keyframes tortoise-walk-page3 {
     0% {
-        transform: translateX(0); /* Start at its current position */
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(5vw); /* Move 50% of the viewport width to the right */
+        transform: translateX(5vw);
     }
 }
 
@@ -284,10 +275,10 @@
 
 @keyframes tortoise-walk {
     0% {
-        transform: translateX(0); /* Start at its current position */
+        transform: translateX(0);
     }
     100% {
-        transform: translateX(100vw); /* Move 50% of the viewport width to the right */
+        transform: translateX(100vw);
     }
 }
 
@@ -371,7 +362,7 @@
     animation: 
         screen-shake 0.3s cubic-bezier(.36,.07,.19,.97) both;
     
-    /* Start after a 0.5s delay and run once */
+    /* Start after a 7.5s delay and run once */
     animation-delay: 7.5s; 
     animation-iteration-count: 1; 
 }
@@ -382,7 +373,7 @@
     position: absolute;
     top: 80%;
     left: 5%;
-    animation: tortoise-walk 100s forwards normal; /* Apply the animation here */
+    animation: tortoise-walk 100s forwards normal;
     animation-delay: 7.5s;
     z-index: 1;
 }
@@ -476,14 +467,8 @@
 }
 
 
-
-
-
-
-
-
 /*This contains the div box which holds the tree*/
-#leftbox {
+#page-5 #leftbox {
     top: 0;
     left: 0;
     width: 70vw;
@@ -497,7 +482,7 @@
     
 }
 /*you can modify the background color of the textbox if you want*/
-#textboxstuff {
+#page-5 #textboxstuff {
     font-size: 2rem;
     background-color: #DED6D6;
     border-radius: 10px 10px 10px 10px;
@@ -508,7 +493,7 @@
 }
 
 /*This controls the tree image*/
-#page5tree {
+#page-5 #page5tree {
     position: relative;
     top:  -40%;
     left: -39%;
@@ -530,16 +515,14 @@
 }
 
 
-/* --- New Keyframe: Running Hare Fade Out --- */
+
 @keyframes hare-fade-out {
     100% {
         opacity: 0;
-        /* Keep the hare at the final position defined by the jump animation */
         transform: translate(40vw, 0);
     }
 }
 
-/* --- New Keyframe: Sleeping Hare Fade In --- */
 @keyframes hare-fade-in {
     0% {
         opacity: 0; /* Start invisible */
@@ -549,34 +532,28 @@
     }
 }
 
-.hare-racer {
+#page-5 .hare-racer {
     height: 20vh;
     width: 20vw;
     position: absolute;
     top: 60%;
     left: 5%;
-    z-index: 1; /* Ensures they are above other elements */
+    z-index: 1;
 }
 
-#hare-running {
-    /* Running hare is visible and moves */
+#page-5 #hare-running {
     opacity: 1;
     animation: jump-forward-page-5 2s ease-in-out forwards normal, hare-fade-out 0.5s 2s forwards; /* Fades out after 2s (when movement ends) */
 }
 
-#hare-sleeping {
+#page-5 #hare-sleeping {
     /* Sleeping hare starts invisible, positioned at the end of the jump */
     opacity: 0;
-    
-    /* CRUCIAL: Manually set the final movement position */
-    /* This ensures the sleeping hare is exactly where the running hare stopped */
     transform: translate(40vw, 0); 
-
-    /* Fade in after the running hare's movement animation finishes (2s) */
     animation: hare-fade-in 0.5s 2s forwards; 
 }
 
-#zzz-bubble {
+#page-5 #zzz-bubble {
     width: 10vw;
     height: 20vh;
     position: absolute;
@@ -593,7 +570,7 @@
         /* 2. Fade In: Makes the ZZZ appear quickly */
         zzz-fade-in 0.2s forwards;
         
-    /* CRITICAL: Delay the start of BOTH animations (2s movement + 0.5s fade) */
+    /* Delay the start of BOTH animations (2s movement + 0.5s fade) */
     animation-delay: 2.5s; 
 }
 
@@ -603,22 +580,450 @@
     }
 }
 
-/* --- ZZZ Movement Keyframe (Top-Left Diagonal Bob) --- */
 @keyframes zzz-bob-diagonal {
     0% { 
-        /* Start position (bottom-right of the movement path) */
         transform: translate(0, 0);
         opacity: 1;
     }
     50% { 
-        /* Peak position (up and left) */
-        /* Moves 10px UP (-10px) and 10px LEFT (-10px) */
         transform: translate(-10px, -10px); 
         opacity: 1;
     }
     100% { 
-        /* Slightly offset from 0% before reversal */
         transform: translate(2px, 2px); 
         opacity: 1;
+    }
+}
+
+
+
+#page-6 {
+    background-image: url("images/forest_page_5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow: hidden;
+
+}
+
+
+/*This contains the div box which holds the tree*/
+#page-6 #leftbox {
+    top: 0;
+    left: 0;
+    width: 70vw;
+    height: 100vh;
+    clip-path:  polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 49%, 0% 0%);
+    shape-outside: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 49%, 0% 0%);
+    font-size: 100px;
+    float: left;
+    margin-right: -190px;
+    transform: scale(1.09);
+    
+}
+/*you can modify the background color of the textbox if you want*/
+#page-6 #textboxstuff {
+    font-size: 2rem;
+    background-color: #DED6D6;
+    border-radius: 10px 10px 10px 10px;
+    width: 86vw;
+
+
+    
+}
+
+/*This controls the tree image*/
+#page-6 #page6tree {
+    position: relative;
+    top:  -40%;
+    left: -39%;
+    width: 100%;
+
+}
+
+
+
+
+
+#page-6 .hare-racer {
+    height: 20vh;
+    width: 20vw;
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    z-index: 1;
+}
+
+
+
+#page-6 #hare-sleeping {
+    opacity: 1;
+    transform: translate(40vw, 0); 
+    z-index: -2;
+
+}
+
+
+#page-6 #zzz-bubble {
+    width: 10vw;
+    height: 20vh;
+    position: absolute;
+    z-index: 2; 
+    top: 50%; 
+    left: 43%;
+    opacity: 1; 
+    animation: 
+        zzz-bob-diagonal 1.5s ease-in-out infinite alternate;
+        
+
+}
+
+#page-6 #tortoise {
+    height: 20vh;
+    width: 20vw;
+    position: absolute;
+    top: 75%;
+    left: 0%;
+    animation: tortoise-walk 30s forwards normal;
+    z-index: -1;
+}
+
+
+#page-7 {
+    background-image: url("images/forest_page_5.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow: hidden;
+
+}
+
+
+/*This contains the div box which holds the tree*/
+#page-7 #leftbox {
+    top: 0;
+    left: 0;
+    width: 70vw;
+    height: 100vh;
+    clip-path:  polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 49%, 0% 0%);
+    shape-outside: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 0 49%, 0% 0%);
+    font-size: 100px;
+    float: left;
+    margin-right: -190px;
+    transform: scale(1.09);
+    
+}
+/*you can modify the background color of the textbox if you want*/
+#page-7 #textboxstuff {
+    font-size: 2rem;
+    background-color: #DED6D6;
+    border-radius: 10px 10px 10px 10px;
+    width: 86vw;
+
+
+    
+}
+
+/*This controls the tree image*/
+#page-7 #page7tree {
+    position: relative;
+    top:  -40%;
+    left: -39%;
+    width: 100%;
+
+}
+
+
+
+
+
+#page-7 .hare-racer {
+    height: 20vh;
+    width: 20vw;
+    position: absolute;
+    top: 60%;
+    left: 5%;
+    z-index: 1;
+}
+
+
+
+#page-7 #hare-sleeping {
+    opacity: 1;
+    transform: translate(40vw, 0); 
+    z-index: -2;
+    animation: hare-fade-out-p7 0.5s 7.5s forwards;
+
+}
+
+#page-7 #hare-running { 
+    opacity: 0;
+    transform: translate(40vw, 0); 
+    /* Chained animation separated by comma */
+    animation: 
+        hare-fade-in-p7 0.5s 7.5s forwards,
+        hare-jump-to-tortoise 2s 9.5s ease-out forwards;
+
+}
+
+#page-7 #zzz-bubble {
+    width: 10vw;
+    height: 20vh;
+    position: absolute;
+    z-index: 2; 
+    top: 50%; 
+    left: 43%;
+    opacity: 1; 
+    animation: 
+        /* 1. The bobbing animation (for 7.5s total) */
+        zzz-bob-diagonal 1.5s ease-in-out alternate infinite,
+        /* 2. The fade out (0.2s duration, starting at 7.5s) */
+        hare-fade-out-p7 0.2s 7.5s forwards; 
+    animation-iteration-count: 5s;
+
+        
+
+}
+
+#page-7 #supprised-exclamation {
+    width: 10vw;
+    height: 10vh;
+    transform: rotate(30deg);
+    position: absolute;
+    top: 53%;
+    left: 55%;
+    animation: supprised-exclamation 2s forwards 7.5s ;
+
+    opacity: 0;
+
+}
+
+@keyframes hare-fade-out-p7 {
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes hare-fade-in-p7 {
+    0% {
+        opacity: 0; 
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes supprised-exclamation {
+    0% {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes hare-jump-to-tortoise {
+    0% {
+        transform: translate(40vw, 0); 
+    }
+    
+    25% {
+        transform: translate(55vw, -40px);
+    }
+    
+
+    50% {
+        transform: translate(70vw, 0); 
+    }
+    
+    /* 83% Peak of Jump 2 (Final section 70vw + 30vw = 100vw) */
+    83% {
+        /* Moves from 70vw to 85vw and arches up */
+        transform: translate(85vw, -40px); 
+    }
+    
+    /* 100% End: Hare moves completely off-screen (100vw) */
+    100% {
+        transform: translate(100vw, 0); 
+    }
+}
+
+#page-8 {
+    background-image: url("images/forest_page_8.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow: hidden;
+
+}
+
+
+
+#page-8 #tortoise {
+    height: 20vh;
+    width: 20vw;
+    position: absolute;
+    top: 55%;
+    left: 5%;
+    z-index: 1;
+    opacity: 1;
+    animation: tortoise-walk-finish 10s forwards,
+               tortoise-fade-out 0.5s 10s forwards; 
+}
+
+
+#page-8 #tortoise-new {
+    height: 20vh;
+    width: 20vw;
+    position: absolute;
+    top: 75%;
+    right: 34%;
+    z-index: 1;
+    opacity: 0;
+    animation: tortoise-fade-in 0.5s 10s forwards; 
+}
+
+
+#page-8 #hare {
+    height: 20vh;
+    width: 20vw;
+    position: absolute;
+    top: 55%; 
+    left: 5%; 
+    z-index: 1;
+    opacity: 0;
+    animation: 
+        /* 1. The main jump-in animation */
+        hare-jump-onto-scene 1s ease-out forwards, 
+        
+        /* 2. The chained fade-out animation: 0.5s duration, starting at 5s */
+        hare-fade-out 5s 2s forwards; 
+    animation-delay: 4s; 
+}
+
+#page-8 #hare-new {
+    height: 20vh;
+    width: 20vw;
+    position: absolute;
+    top: 55%;
+    left: 5%;
+    z-index: 1; 
+    opacity: 0;
+    
+    /* apply the fade-in animation, starting at 5s */
+    animation: hare-fade-in 0.5s 5s forwards; 
+}
+
+#page-8 #text-page-8 {
+    background-color: #DED6D6;
+    font-size: 2rem;
+    justify-content: center;
+    position: absolute;
+    top: 10%;
+    border-radius: 10px 10px 10px 10px;
+    
+}
+
+#page-8 #bear {
+    height: 30vh;
+    width: 20vw;
+    position: absolute;
+    top: 65%;
+    right: 5%;
+    z-index: 0;
+    animation: crowd-jump 0.5s ease-in-out infinite alternate;
+
+}
+
+#page-8 #raccoon {
+    height: 20vh;
+    width: 10vw;
+    position: absolute;
+    top: 75%;
+    right: 20%;
+    z-index: 0;
+    animation: crowd-jump 0.5s ease-in-out infinite alternate;
+
+}
+
+#page-8 #finish {
+    width: 30vw;
+    height: 50vh;
+    position: absolute;
+    top: 45%;
+    right: 35%;
+    transform: scale(1.75);
+    z-index: 30;
+}
+
+
+@keyframes tortoise-walk-finish {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(2%, 30%);
+    }
+    50% {
+        transform: translateX(5%, 50%);
+    }
+    100% {
+        transform: translate(37vw, 20vh);
+    }
+}
+
+@keyframes hare-jump-onto-scene {
+    0% {
+        /* Start position: Off-screen to the left, slightly below the final height */
+        transform: translate(-20vw, 10px); 
+        opacity: 1;
+    }
+    50% {
+        /* Mid-jump: Arching up as it enters the viewport */
+        transform: translate(-5vw, -20px); 
+        opacity: 1;
+    }
+    100% {
+        /* Final position: The element's defined position (left: 5%; top: 55%) */
+        transform: translate(0, 0); 
+        opacity:1
+    }
+}
+
+@keyframes tortoise-fade-out {
+    100% {
+        opacity: 0; 
+    }
+}
+
+
+@keyframes tortoise-fade-in {
+    0% {
+        opacity: 0; 
+    }
+    100% {
+        opacity: 1; 
+    }
+}
+
+
+@keyframes hare-fade-out {
+    100% {
+        opacity: 0; 
+    }
+}
+
+@keyframes hare-fade-in {
+    0% {
+        opacity: 0; 
+    }
+    100% {
+        opacity: 1; 
     }
 }
