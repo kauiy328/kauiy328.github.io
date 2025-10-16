@@ -1,3 +1,5 @@
+
+
 .button-link {
     display: inline-block;
     padding: 10px 20px;
@@ -71,7 +73,6 @@
     height: 40vh;
     width: 70vw;
     font-size: 4rem;
-    font-family: 'Handlee', cursive;
     text-align: center;
     color: #4CAF50;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -83,6 +84,9 @@
     left: 15%;
     z-index: 2;
     text-shadow: 5px 5px 5px #592b0fdc;
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 #page-1 #title-sign {
@@ -155,12 +159,16 @@
 }
 
 #page-2 #text-page-2 {
+    width: 99vw;
     background-color: #DED6D6;
     font-size: 2rem;
     justify-content: center;
     position: absolute;
     top: 10%;
     border-radius: 10px 10px 10px 10px;
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 #page-2 #tortoise {
@@ -187,8 +195,11 @@
     background-color: rgb(129, 171, 203);
     clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 75% 75%, 84% 100%, 50% 75%, 0% 75%);
     text-align: center;
-    font-size: 2rem;
+    font-size: 3rem;
     transform: translate(42vw,55vh);
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 @keyframes laughing-rotate {
@@ -243,12 +254,16 @@
 }
 
 #page-3 #text-page-3 {
+    width: 99vw;
     background-color: #DED6D6;
     font-size: 2rem;
     justify-content: center;
     position: absolute;
     top: 10%;
     border-radius: 10px 10px 10px 10px;
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 #page-3 #text-bubble-hare {
@@ -259,6 +274,9 @@
     text-align: center;
     font-size: 2rem;
     transform: translate(35vw,25vh);
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 #page-3 #text-bubble-tortoise {
@@ -269,6 +287,9 @@
     text-align: center;
     font-size: 2rem;
     transform: translate(20vw, 20vh);
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 
@@ -400,12 +421,16 @@
 
 
 #page-4 #text-page-4 {
+    width: 99vw;
     background-color: #DED6D6;
     font-size: 2rem;
     justify-content: center;
     position: absolute;
     top: 10%;
     border-radius: 10px 10px 10px 10px;
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
     
 }
 
@@ -487,6 +512,9 @@
     background-color: #DED6D6;
     border-radius: 10px 10px 10px 10px;
     width: 86vw;
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
 
 
     
@@ -628,6 +656,9 @@
     background-color: #DED6D6;
     border-radius: 10px 10px 10px 10px;
     width: 86vw;
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
 
 
     
@@ -721,6 +752,9 @@
     background-color: #DED6D6;
     border-radius: 10px 10px 10px 10px;
     width: 86vw;
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
 
 
     
@@ -921,12 +955,16 @@
 }
 
 #page-8 #text-page-8 {
+    width: 99vw;
     background-color: #DED6D6;
     font-size: 2rem;
     justify-content: center;
     position: absolute;
     top: 10%;
     border-radius: 10px 10px 10px 10px;
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
     
 }
 
@@ -1025,5 +1063,89 @@
     }
     100% {
         opacity: 1; 
+    }
+}
+
+#page-9 {
+    background-image: url("images/forest_page_9.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    overflow: hidden;
+
+}
+ 
+
+/* Transparent Box */
+.content-wrapper {
+    height: 50vh;
+    width: 60vw;
+    position: absolute;
+    top: 10%;
+    left: 18%;
+
+    text-align: center;
+    padding: 40px; 
+    
+    background-color: black; 
+    opacity: 0.7;
+    
+    border-radius: 15px; 
+    
+}
+
+/*Text Appearance*/
+.fade-in-text {
+    font-family: "Quicksand", sans-serif;
+    color: #f0f0f0;
+    opacity: 0;
+}
+
+#the-end-page h1 {
+    font-size: 7rem;
+    letter-spacing: 0.5rem; 
+    margin-bottom: 0.5rem;
+    animation: simple-fade-in 3s ease-out forwards;
+    animation-delay: 1s; 
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#the-end-page p {
+    font-size: 3rem;
+    margin-top: 0;
+    animation: simple-fade-in 3s ease-out forwards;
+    animation-delay: 3s; 
+    font-family: "Delius", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#page-9 #tortoise-end {
+    height: 20vh;
+    width: 20vw;
+    position: absolute;
+    top: 80%;
+    left: -10;
+    animation: tortoise-walk-appear normal forwards 1s;
+}
+
+#page-9 #hare-end {
+    height: 20vh;
+    width: 20vw;
+    position: absolute;
+    top: 80%;
+    right: -10;
+    animation: jump-forward-appear normal forwards 1s;
+}
+
+@keyframes simple-fade-in {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
